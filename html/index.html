@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CultiVidade | Plantando saúde, colhendo futuro</title>
+  <meta name="description" content="CultiVidade - Horta Comunitária em Catanduva. Alimentação saudável, sustentável e acessível para todos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- ===================================================== -->
+  <!-- HEADER -->
+  <!-- ===================================================== -->
+  <header class="site-header" id="siteHeader">
+
+  <!-- BARRA DE ACESSIBILIDADE -->
+  <div class="header-top">
+    <div class="header-top-inner">
+      <span class="a11y-label">Acessibilidade</span>
+
+      <button class="font-btn" id="fontIncrease" aria-label="Aumentar fonte">
+        A+
+      </button>
+
+      <button class="font-btn" id="fontDecrease" aria-label="Diminuir fonte">
+        A-
+      </button>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro">
+        <span class="theme-toggle-knob"></span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- HEADER PRINCIPAL -->
+  <div class="header-main">
+
+    <!-- LOGO -->
+    <a href="#topo" class="logo">
+      <img src="../img/loogo.png" alt="CultiVidade" class="logo-img logo-normal">
+      <img src="../img/branco.png" alt="CultiVidade" class="logo-img logo-mono">
+    </a>
+
+
+    <!-- MENU -->
+    <nav class="main-nav" id="mainNav">
+
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#beneficios">Benefícios</a></li>
+        <li><a href="#doacoes">Doações</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+
+
+      <!-- BOTÕES -->
+      <div class="header-actions">
+
+        <button class="btn btn-outline" id="btnEntrar">
+          Entrar
+        </button>
+
+        <button class="btn btn-solid" id="btnCadastro">
+          Cadastro
+        </button>
+
+        <button class="user-icon" aria-label="Área do usuário">
+
+          <svg
+            viewBox="0 0 24 24"
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+
+        </button>
+
+      </div>
+
+    </nav>
+
+
+    <!-- MENU MOBILE -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+
+</header>
+
+<main id="topo">
+
+    <!-- ===================================================== -->
+    <!-- HERO / SLIDER -->
+    <!-- ===================================================== -->
+    <section class="hero" id="inicio">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide active" style="background-image: url('../img/BANNER\ 2.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('../img/BANNER\ 3.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('../img/BANNER1.jpg');"></div>
+      </div>
+      <div class="hero-overlay"></div>
+
+      
+
+      <button class="hero-arrow" id="heroNext" aria-label="Próximo slide">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M9 6l6 6-6 6"></path>
+        </svg>
+      </button>
+
+      <div class="hero-dots" id="heroDots"></div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- DEPOIMENTOS -->
+    <!-- ===================================================== -->
+    <section class="section depoimentos" id="depoimentos">
+      <h2 class="section-title fade-in"><span class="pill">DEPOIMENTOS</span></h2>
+
+      <div class="cards-row">
+        <article class="card testimonial fade-in">
+          <img class="testimonial-photo" loading="lazy" src="../img/mulhernova.png" alt="Foto de Sra. Ana L.">
+          <h3>Sra. Ana L.</h3>
+          <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <p>Projeto maravilhoso! As verduras são sempre fresquinhas e o atendimento é impecável. Uma benção para nossa família!</p>
+        </article>
+
+        <article class="card testimonial fade-in">
+          <img class="testimonial-photo" loading="lazy" src="../img/homemnovo.png" alt="Foto de Ricardo M.">
+          <h3>Ricardo M.</h3>
+          <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <p>Iniciativa fantástica! Os vegetais têm um sabor incrível, e a equipe é extremamente atenciosa e educada. Nota 10!</p>
+        </article>
+
+        <article class="card testimonial fade-in">
+          <img class="testimonial-photo" loading="lazy" src="../img/homemvelho.png" alt="Foto de Sr. Carlos P.">
+          <h3>Sr. Carlos P.</h3>
+          <div class="stars" aria-label="5 de 5 estrelas">★★★★★</div>
+          <p>Amei o projeto! Fomos recebidos com muito carinho e os tomates são deliciosos e docinhos. Gratidão a todos!</p>
+        </article>
+
+        <article class="card testimonial fade-in">
+          <img class="testimonial-photo" loading="lazy" src="../img/mulhervelha.png" alt="Foto de Sra. Teresa G.">
+          <h3>Sra. Teresa G.</h3>
+          <div class="stars" aria-label="4.5 de 5 estrelas">★★★★<span class="half">★</span></div>
+          <p>Excelente! As verduras são de altíssima qualidade e o serviço é sempre muito pontual e organizado. Recomendo muito!</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- SOBRE NÓS -->
+    <!-- ===================================================== -->
+    <section class="section sobre" id="sobre">
+      <h2 class="section-title fade-in"><span class="pill">SOBRE NÓS</span></h2>
+
+      <div class="sobre-row fade-in">
+        <div class="sobre-text">
+          <h3>Quem Somos</h3>
+          <p>Criamos a Horta Comunitária CultiVidade em 2026 com o objetivo de promover alimentação saudável, sustentável e acessível para todos em Catanduva. Produzimos alimentos naturais destinados principalmente às famílias em situação de vulnerabilidade social, fortalecendo a segurança alimentar e incentivando hábitos saudáveis.</p>
+        </div>
+        <div class="sobre-image">
+          <img loading="lazy" src="../img/maobatata.jpg" alt="Mãos segurando batatas colhidas da horta">
+        </div>
+      </div>
+
+      <div class="sobre-row reverse fade-in">
+        <div class="sobre-image">
+          <img loading="lazy" src="../img/maotomate.jpg" alt="Mãos segurando tomates cereja colhidos">
+        </div>
+        <div class="sobre-text">
+          <h3>Nossa Missão</h3>
+          <p>Mais do que produzir alimentos, cultivamos solidariedade, esperança e qualidade de vida. Atuamos como um projeto social que aproxima pessoas, fortalece a comunidade e incentiva uma alimentação mais saudável.</p>
+        </div>
+      </div>
+
+      <div class="sobre-row fade-in">
+        <div class="sobre-text">
+          <h3>Sustentabilidade</h3>
+          <p>Nossa produção utiliza métodos naturais, respeitando o meio ambiente e evitando o uso de agrotóxicos. Dessa forma produzimos alimentos frescos, nutritivos e sustentáveis.</p>
+        </div>
+        <div class="sobre-image">
+          <img loading="lazy" src="../img/horta.jpg" alt="Mudas de alface plantadas na terra">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- BENEFÍCIOS DOS ALIMENTOS -->
+    <!-- ===================================================== -->
+    <section class="section beneficios" id="beneficios">
+      <div class="beneficios-grid">
+
+        <div class="beneficio-item fade-in">
+          <img loading="lazy" src="../img/batata.jpg" alt="Batatas frescas">
+          <div class="beneficio-card yellow">
+            <h4>Batata</h4>
+            <p>Fonte de energia e rica em vitaminas, ajuda no funcionamento do corpo e traz saciedade.</p>
+          </div>
+        </div>
+
+        <div class="beneficio-item fade-in">
+          <img loading="lazy" src="../img/alface.jpg" alt="Alface fresca">
+          <div class="beneficio-card green">
+            <h4>Alface</h4>
+            <p>Leve e nutritiva, ajuda na digestão, hidratação e contribui para uma alimentação saudável.</p>
+          </div>
+        </div>
+
+        <div class="beneficio-item fade-in">
+          <img loading="lazy" src="../img/cenoura.jpg" alt="Cenouras frescas">
+          <div class="beneficio-card orange">
+            <h4>Cenoura</h4>
+            <p>Possui vitamina A, importante para a visão, pele saudável e fortalecimento da imunidade.</p>
+          </div>
+        </div>
+
+        <div class="beneficio-item fade-in">
+          <img loading="lazy" src="../img/tomate.jpg" alt="Tomates frescos">
+          <div class="beneficio-card red">
+            <h4>Tomate</h4>
+            <p>Rico em licopeno, vitamina C e antioxidantes, fortalece a imunidade e ajuda na saúde do coração.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- DIAS DE DOAÇÃO -->
+    <!-- ===================================================== -->
+    <section class="section doacoes" id="doacoes">
+      <h2 class="section-title fade-in"><span class="pill">DIAS DE DOAÇÕES</span></h2>
+
+      <div class="doacoes-row fade-in">
+        <div class="doacoes-image">
+          <img loading="lazy" src="../img/doacao.png" alt="Banca de doações do Projeto CultiVidade em Catanduva">
+        </div>
+
+        <ul class="doacoes-list">
+          <li><span class="dia-btn">Segunda</span><span class="dia-info">Vila Soto — 10h às 15h</span></li>
+          <li><span class="dia-btn">Terça</span><span class="dia-info">Pacha — 10h às 15h</span></li>
+          <li><span class="dia-btn">Quarta</span><span class="dia-info">Alpino — 10h às 15h</span></li>
+          <li><span class="dia-btn">Quinta</span><span class="dia-info">Nova Catanduva — 10h às 15h</span></li>
+          <li><span class="dia-btn">Sexta</span><span class="dia-info">Eldorado — 10h às 15h</span></li>
+          <li><span class="dia-btn">Sábado</span><span class="dia-info">Bom Pastor — 10h às 15h</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================================================== -->
+    <!-- CONTATO -->
+    <!-- ===================================================== -->
+    <section class="section contato" id="contato">
+      <div class="contato-row fade-in">
+        <div class="contato-info">
+          <h2>CONTATO</h2>
+
+          <p><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92z"></path></svg> 17-99999-0000</p>
+
+          <p><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"></path><path d="M22 6l-10 7L2 6"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg> Cultividade@gmail.com</p>
+
+          <p><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Estrada Vicinal José Frias Garcia</p>
+
+          <p><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg> Cultividade_</p>
+        </div>
+
+        <div class="contato-map">
+          <iframe
+            title="Mapa de localização CultiVidade"
+            src="https://www.google.com/maps?q=Estrada+Vicinal+Jose+Frias+Garcia,+Catanduva,+SP&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================== -->
+  <!-- FOOTER -->
+  <!-- ===================================================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <a href="#topo" class="footer-logo">
+        <img src="../img/loogo.png" alt="CultiVidade" class="logo-normal">
+        <img src="../img/branco.png" alt="CultiVidade" class="logo-mono">
+      </a>
+
+      <p class="footer-copy">Todos os direitos reservados a CultiVidade. Copyright &copy; <span id="anoAtual">2026</span>.</p>
+    </div>
+  </footer>
+
+  <!-- Botão voltar ao topo -->
+  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5">
+      <path d="M18 15l-6-6-6 6"></path>
+    </svg>
+  </button>
+
+     <!-- ===================================================== -->
+  <!-- AUTENTICAÇÃO: TELA DE BLOQUEIO (usuário não logado) -->
+  <!-- ===================================================== -->
+  <div class="auth-gate" id="authGate">
+    <div class="auth-gate-inner">
+      <a href="#topo" class="logo auth-gate-logo">
+        <img src="../img/logo.png" alt="CultiVidade" class="logo-img">
+      </a>
+      <p class="auth-gate-text">Crie sua conta ou entre para acessar o site.</p>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- MODAL: CADASTRO -->
+  <!-- ===================================================== -->
+  <div class="auth-modal-overlay" id="modalCadastro">
+    <div class="auth-modal">
+      <h2 class="auth-modal-title">Criar conta</h2>
+      <form id="formCadastro" novalidate>
+        <div class="auth-field">
+          <label for="cadNome">Nome completo</label>
+          <input type="text" id="cadNome" name="nome" autocomplete="name" required>
+        </div>
+        <div class="auth-field">
+          <label for="cadEmail">E-mail</label>
+          <input type="email" id="cadEmail" name="email" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="cadSenha">Senha</label>
+          <input type="password" id="cadSenha" name="senha" autocomplete="new-password" minlength="8" required>
+        </div>
+        <div class="auth-field">
+          <label for="cadConfirmarSenha">Confirmar senha</label>
+          <input type="password" id="cadConfirmarSenha" name="confirmarSenha" autocomplete="new-password" minlength="8" required>
+        </div>
+        <p class="auth-error" id="erroCadastro" role="alert"></p>
+        <button type="submit" class="btn btn-solid auth-submit">Cadastrar</button>
+        <p class="auth-switch">Já possui uma conta? <button type="button" class="auth-link" id="irParaLogin">Entrar</button></p>
+      </form>
+    </div>
+  </div>
+ 
+  <!-- ===================================================== -->
+  <!-- MODAL: LOGIN -->
+  <!-- ===================================================== -->
+  <div class="auth-modal-overlay" id="modalLogin">
+    <div class="auth-modal">
+      <h2 class="auth-modal-title">Entrar</h2>
+      <form id="formLogin" novalidate>
+        <div class="auth-field">
+          <label for="logEmail">E-mail</label>
+          <input type="email" id="logEmail" name="email" autocomplete="email" required>
+        </div>
+        <div class="auth-field">
+          <label for="logSenha">Senha</label>
+          <input type="password" id="logSenha" name="senha" autocomplete="current-password" required>
+        </div>
+        <p class="auth-error" id="erroLogin" role="alert"></p>
+        <button type="submit" class="btn btn-solid auth-submit">Entrar</button>
+        <p class="auth-switch">Não possui uma conta? <button type="button" class="auth-link" id="irParaCadastro">Cadastre-se</button></p>
+      </form>
+    </div>
+  </div>
+ 
+  <!-- ===================================================== -->
+  <!-- MODAL: PERFIL -->
+  <!-- ===================================================== -->
+  <div class="auth-modal-overlay" id="modalPerfil">
+    <div class="auth-modal">
+      <button type="button" class="auth-close" id="fecharPerfil" aria-label="Fechar">&times;</button>
+      <h2 class="auth-modal-title">Meu perfil</h2>
+      <div class="perfil-view" id="perfilView">
+        <p class="perfil-linha"><strong>Nome:</strong> <span id="perfilNome"></span></p>
+        <p class="perfil-linha"><strong>E-mail:</strong> <span id="perfilEmail"></span></p>
+        <p class="perfil-linha"><strong>Cadastrado em:</strong> <span id="perfilData"></span></p>
+        <div class="perfil-acoes">
+          <button type="button" class="btn btn-outline" id="btnEditarPerfil">Editar perfil</button>
+          <button type="button" class="btn btn-solid" id="btnSair">Sair</button>
+        </div>
+      </div>
+      <form id="formEditarPerfil" class="perfil-edit" novalidate hidden>
+        <div class="auth-field">
+          <label for="editNome">Nome completo</label>
+          <input type="text" id="editNome" name="nome" required>
+        </div>
+        <div class="auth-field">
+          <label for="editEmail">E-mail</label>
+          <input type="email" id="editEmail" name="email" required>
+        </div>
+        <p class="auth-error" id="erroEditarPerfil" role="alert"></p>
+        <div class="perfil-acoes">
+          <button type="button" class="btn btn-outline" id="cancelarEdicao">Cancelar</button>
+          <button type="submit" class="btn btn-solid">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+    
+  <script src="../js/script.js"></script>
+
+  <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+</body>
+</html>
