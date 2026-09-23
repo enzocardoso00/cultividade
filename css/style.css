@@ -3,7 +3,7 @@
    Organizado por seções. Cores da identidade da marca:
    Verde #2E7D32 | Laranja #F7931E | Branco | Cinza claro
    ========================================================= */
-
+ 
 /* ---------------------------------------------------------
    1. RESET & VARIÁVEIS GLOBAIS
    --------------------------------------------------------- */
@@ -24,19 +24,19 @@
   --fonte-titulo: 'Poppins', sans-serif;
   --fonte-corpo: 'Nunito', sans-serif;
   --header-h: 118px;
-
+ 
   /* Escala de fonte ajustável via JS (acessibilidade) */
   --escala-fonte: 1;
 }
-
+ 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--header-h);
   font-size: calc(16px * var(--escala-fonte));
 }
-
+ 
 body {
   font-family: var(--fonte-corpo);
   color: var(--texto);
@@ -45,13 +45,13 @@ body {
   overflow-x: hidden;
   transition: background .4s ease, color .4s ease;
 }
-
+ 
 img { max-width: 100%; display: block; }
 ul { list-style: none; }
 a { text-decoration: none; color: inherit; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 h1, h2, h3, h4 { font-family: var(--fonte-titulo); }
-
+ 
 /* Botões reutilizáveis */
 .btn {
   display: inline-block;
@@ -68,28 +68,43 @@ h1, h2, h3, h4 { font-family: var(--fonte-titulo); }
   border: 2px solid var(--laranja);
 }
 .btn-outline:hover { background: var(--laranja); color: var(--branco); transform: translateY(-2px); }
-
+ 
 .btn-outline:hover { background: var(--laranja); color: var(--branco); transform: translateY(-2px); }
-
-/* Botão "Entrar" no modo escuro: fundo preto, texto e borda laranja */
+ 
+/* Botões "Entrar" e "Cadastro" no modo monocromático (dark-mode): fundo preto, texto e borda branca */
 body.dark-mode #btnEntrar {
   background: #000000;
-  color: var(--laranja);
-  border-color: var(--laranja);
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
+/* ALTERADO: hover do "Entrar" no modo monocromático — sem nenhum efeito laranja,
+   apenas a mesma sombra branca usada no hover do "Cadastro" */
 body.dark-mode #btnEntrar:hover {
-  background: var(--laranja);
-  color: var(--branco);
-  border-color: var(--laranja);
+  background: #000000;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, .35);
 }
-
+body.dark-mode #btnCadastro {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+  box-shadow: none;
+}
+body.dark-mode #btnCadastro:hover {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+  box-shadow: 0 6px 16px rgba(255, 255, 255, .35);
+}
+ 
 .btn-solid {
   background: var(--laranja);
   color: var(--branco);
   border: 2px solid var(--laranja);
   box-shadow: 0 6px 16px rgba(247, 147, 30, .35);
 }
-
+ 
 .btn-solid {
   background: var(--laranja);
   color: var(--branco);
@@ -97,184 +112,184 @@ body.dark-mode #btnEntrar:hover {
   box-shadow: 0 6px 16px rgba(247, 147, 30, .35);
 }
 .btn-solid:hover { background: var(--laranja-escuro); border-color: var(--laranja-escuro); transform: translateY(-2px); box-shadow: 0 10px 22px rgba(247,147,30,.45); }
-
+ 
 /* ---------------------------------------------------------
    2. HEADER
    --------------------------------------------------------- */
 /* =========================================
    HEADER
 ========================================= */
-
+ 
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-
+ 
   background: var(--branco);
-
+ 
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.06);
 }
-
-
+ 
+ 
 /* =========================================
    BARRA DE ACESSIBILIDADE
 ========================================= */
-
+ 
 .header-top {
   height: 35px;
-
+ 
   background: var(--cinza-claro);
-
+ 
   border-bottom: 1px solid var(--cinza-medio);
 }
-
+ 
 .header-top-inner {
   max-width: 1280px;
-
+ 
   height: 100%;
-
+ 
   margin: 0 auto;
-
+ 
   padding: 0 32px;
-
+ 
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
+ 
   gap: 10px;
-
+ 
   font-size: 0.78rem;
 }
-
+ 
 .a11y-label {
   color: var(--texto-suave);
-
+ 
   font-weight: 600;
-
+ 
   margin-right: 4px;
 }
-
-
+ 
+ 
 /* =========================================
    BOTÕES A+ / A-
 ========================================= */
-
+ 
 .font-btn {
   width: 26px;
   height: 26px;
-
+ 
   border-radius: 6px;
-
+ 
   border: 1px solid var(--cinza-medio);
-
+ 
   background: var(--branco);
-
+ 
   font-weight: 700;
   font-size: 0.72rem;
-
+ 
   color: var(--texto);
-
+ 
   cursor: pointer;
-
+ 
   transition:
     background 0.2s,
     color 0.2s;
 }
-
+ 
 .font-btn:hover {
   background: var(--verde);
   color: var(--branco);
 }
-
-
+ 
+ 
 /* =========================================
    BOTÃO DE TEMA
 ========================================= */
-
+ 
 .theme-toggle {
   width: 40px;
   height: 20px;
-
+ 
   padding: 0;
-
+ 
   border: none;
-
+ 
   border-radius: 20px;
-
+ 
   background: linear-gradient(
     90deg,
     var(--laranja) 50%,
     var(--cinza-medio) 50%
   );
-
+ 
   position: relative;
-
+ 
   margin-left: 6px;
-
+ 
   cursor: pointer;
 }
-
+ 
 .theme-toggle-knob {
   position: absolute;
-
+ 
   top: 2px;
   left: 2px;
-
+ 
   width: 16px;
   height: 16px;
-
+ 
   border-radius: 50%;
-
+ 
   background: var(--branco);
-
+ 
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-
+ 
   transition: transform 0.3s ease;
 }
-
+ 
 .theme-toggle.active .theme-toggle-knob {
   transform: translateX(20px);
 }
-
-
+ 
+ 
 /* =========================================
    HEADER PRINCIPAL
 ========================================= */
-
+ 
 .header-main {
   max-width: 1280px;
-
+ 
   height: 70px;
-
+ 
   margin: 0 auto;
-
+ 
   padding: 0 32px;
-
+ 
   display: flex;
-
+ 
   align-items: center;
-
+ 
   justify-content: space-between;
 }
-
-
+ 
+ 
 /* =========================================
    LOGO
 ========================================= */
-
+ 
 .logo {
   width: 145px; 
   height: 62px;   
-
+ 
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-shrink: 0;
   text-decoration: none;
 }
-
+ 
 .logo-img {
   display: block;
   width: auto;
@@ -282,7 +297,7 @@ body.dark-mode #btnEntrar:hover {
   max-width: 145px;
   object-fit: contain;
 }
-
+ 
 /* ALTERADO: troca automática entre logo normal e logo monocromática */
 .logo-mono {
   display: none;
@@ -297,158 +312,158 @@ body.dark-mode .logo-mono {
    height: 62px;      
   max-width: 145px;
 }
-
-
+ 
+ 
 /* =========================================
    NAVEGAÇÃO
 ========================================= */
-
+ 
 .main-nav {
   display: flex;
-
+ 
   align-items: center;
-
+ 
   gap: 40px;
-
+ 
   margin-left: auto;
 }
-
-
+ 
+ 
 /* =========================================
    LINKS
 ========================================= */
-
+ 
 .nav-links {
   display: flex;
-
+ 
   align-items: center;
-
+ 
   gap: 28px;
-
+ 
   list-style: none;
-
+ 
   margin: 0;
   padding: 0;
 }
-
+ 
 .nav-links a {
   font-weight: 600;
-
+ 
   font-size: 0.95rem;
-
+ 
   color: var(--texto);
-
+ 
   text-decoration: none;
-
+ 
   position: relative;
-
+ 
   padding-bottom: 4px;
 }
-
+ 
 .nav-links a::after {
   content: "";
-
+ 
   position: absolute;
-
+ 
   left: 0;
   bottom: 0;
-
+ 
   width: 0;
   height: 2px;
-
+ 
   background: var(--verde);
-
+ 
   transition: width 0.25s ease;
 }
-
+ 
 .nav-links a:hover::after {
   width: 100%;
 }
-
-
+ 
+ 
 /* =========================================
    BOTÕES DO HEADER
 ========================================= */
-
+ 
 .header-actions {
   display: flex;
-
+ 
   align-items: center;
-
+ 
   gap: 12px;
-
+ 
   flex-shrink: 0;
 }
-
-
+ 
+ 
 /* =========================================
    ÍCONE DO USUÁRIO
 ========================================= */
-
+ 
 .user-icon {
   width: 40px;
   height: 40px;
-
+ 
   padding: 0;
-
+ 
   border: none;
-
+ 
   border-radius: 50%;
-
+ 
   background: var(--texto);
-
+ 
   color: var(--branco);
-
+ 
   display: flex;
-
+ 
   align-items: center;
   justify-content: center;
-
+ 
   cursor: pointer;
-
+ 
   transition: background 0.25s ease;
 }
-
+ 
 .user-icon:hover {
   background: var(--verde);
 }
-
-
+ 
+ 
 /* =========================================
    MENU MOBILE
 ========================================= */
-
+ 
 .menu-toggle {
   display: none;
-
+ 
   flex-direction: column;
-
+ 
   gap: 5px;
-
+ 
   width: 30px;
-
+ 
   padding: 0;
-
+ 
   border: none;
-
+ 
   background: transparent;
-
+ 
   cursor: pointer;
 }
-
+ 
 .menu-toggle span {
   height: 3px;
   width: 100%;
-
+ 
   background: var(--verde);
-
+ 
   border-radius: 3px;
-
+ 
   transition:
     transform 0.3s ease,
     opacity 0.3s ease;
 }
-
+ 
 /* ---------------------------------------------------------
    3. HERO / SLIDER
    --------------------------------------------------------- */
@@ -462,7 +477,7 @@ body.dark-mode .logo-mono {
   display: flex;
   align-items: center;
 }
-
+ 
 .hero-slider { position: absolute; inset: 0; }
 .hero-slide {
   position: absolute; inset: 0;
@@ -472,12 +487,12 @@ body.dark-mode .logo-mono {
   transition: opacity 1.2s ease;
 }
 .hero-slide.active { opacity: 1; }
-
+ 
 .hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(90deg, rgba(15,25,15,.62) 0%, rgba(15,25,15,.30) 55%, rgba(15,25,15,.05) 100%);
 }
-
+ 
 .hero-content {
   position: relative;
   z-index: 2;
@@ -506,7 +521,7 @@ body.dark-mode .logo-mono {
   display: inline-block;
 }
 .btn-hero { margin-top: 28px; font-size: 1rem; padding: 14px 34px; }
-
+ 
 .hero-arrow {
   position: absolute;
   right: 30px; top: 50%;
@@ -522,7 +537,7 @@ body.dark-mode .logo-mono {
   transition: background .25s ease, transform .25s ease;
 }
 .hero-arrow:hover { background: var(--laranja); border-color: var(--laranja); transform: translateY(-50%) scale(1.08); }
-
+ 
 .hero-dots {
   position: absolute;
   bottom: 24px; left: 0; right: 0;
@@ -537,7 +552,7 @@ body.dark-mode .logo-mono {
   transition: background .25s ease, transform .25s ease;
 }
 .hero-dots .dot.active { background: var(--laranja); transform: scale(1.2); }
-
+ 
 /* ---------------------------------------------------------
    4. SEÇÕES GENÉRICAS / TÍTULOS
    --------------------------------------------------------- */
@@ -546,7 +561,7 @@ body.dark-mode .logo-mono {
   margin: 0 auto;
   padding: 90px 32px;
 }
-
+ 
 .section-title { text-align: center; margin-bottom: 56px; }
 .pill {
   display: inline-block;
@@ -560,11 +575,11 @@ body.dark-mode .logo-mono {
   border-radius: 30px;
   box-shadow: 0 8px 20px rgba(247,147,30,.3);
 }
-
+ 
 /* Fade-in ao rolar */
 .fade-in { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s ease; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
-
+ 
 /* ---------------------------------------------------------
    5. DEPOIMENTOS
    --------------------------------------------------------- */
@@ -583,7 +598,7 @@ body.dark-mode .logo-mono {
   transition: transform .3s ease, box-shadow .3s ease;
 }
 .card.testimonial:hover { transform: translateY(-8px); box-shadow: var(--sombra-forte); }
-
+ 
 .testimonial-photo {
   width: 78px; height: 78px;
   border-radius: 50%;
@@ -595,7 +610,7 @@ body.dark-mode .logo-mono {
 .stars { color: var(--laranja); letter-spacing: 2px; margin-bottom: 12px; font-size: 1rem; }
 .stars .half { opacity: .45; }
 .card.testimonial p { font-size: .9rem; color: var(--texto-suave); }
-
+ 
 /* ---------------------------------------------------------
    6. SOBRE NÓS
    --------------------------------------------------------- */
@@ -610,10 +625,10 @@ body.dark-mode .logo-mono {
 .sobre-row:last-child { margin-bottom: 0; }
 .sobre-row.reverse .sobre-text { order: 2; }
 .sobre-row.reverse .sobre-image { order: 1; }
-
+ 
 .sobre-text h3 { color: var(--verde-escuro); font-size: 1.6rem; margin-bottom: 16px; }
 .sobre-text p { color: var(--texto-suave); font-size: 1rem; }
-
+ 
 .sobre-image img {
   border-radius: var(--raio-grande);
   box-shadow: var(--sombra);
@@ -623,7 +638,7 @@ body.dark-mode .logo-mono {
   transition: transform .5s ease;
 }
 .sobre-image:hover img { transform: scale(1.02); }
-
+ 
 /* ---------------------------------------------------------
    7. BENEFÍCIOS DOS ALIMENTOS
    --------------------------------------------------------- */
@@ -642,7 +657,7 @@ body.dark-mode .logo-mono {
   transition: transform .35s ease;
 }
 .beneficio-item:hover img { transform: scale(1.04); }
-
+ 
 .beneficio-card {
   background: var(--branco);
   border-radius: var(--raio);
@@ -653,7 +668,7 @@ body.dark-mode .logo-mono {
 .beneficio-card:hover { transform: translateY(-6px); box-shadow: var(--sombra); }
 .beneficio-card h4 { font-size: 1.05rem; margin-bottom: 8px; }
 .beneficio-card p { font-size: .86rem; color: var(--texto-suave); }
-
+ 
 .beneficio-card.yellow { border-color: #F2C230; }
 .beneficio-card.yellow h4 { color: #b8890f; }
 .beneficio-card.green { border-color: var(--verde); }
@@ -662,7 +677,7 @@ body.dark-mode .logo-mono {
 .beneficio-card.orange h4 { color: var(--laranja-escuro); }
 .beneficio-card.red { border-color: #d64545; }
 .beneficio-card.red h4 { color: #b02f2f; }
-
+ 
 /* ---------------------------------------------------------
    8. DIAS DE DOAÇÃO
    --------------------------------------------------------- */
@@ -680,7 +695,7 @@ body.dark-mode .logo-mono {
   aspect-ratio: 4/5;
   object-fit: cover;
 }
-
+ 
 .doacoes-list { display: flex; flex-direction: column; gap: 16px; }
 .doacoes-list li {
   display: flex;
@@ -705,7 +720,7 @@ body.dark-mode .logo-mono {
   flex-shrink: 0;
 }
 .dia-info { font-weight: 700; color: var(--texto); font-size: .95rem; }
-
+ 
 /* ---------------------------------------------------------
    9. CONTATO
    --------------------------------------------------------- */
@@ -730,7 +745,7 @@ body.dark-mode .logo-mono {
   font-weight: 600;
 }
 .contato-info svg { color: var(--laranja); flex-shrink: 0; }
-
+ 
 .contato-map {
   border-radius: var(--raio-grande);
   overflow: hidden;
@@ -738,7 +753,7 @@ body.dark-mode .logo-mono {
   height: 320px;
 }
 .contato-map iframe { width: 100%; height: 100%; border: 0; }
-
+ 
 /* ---------------------------------------------------------
    10. FOOTER
    --------------------------------------------------------- */
@@ -747,7 +762,7 @@ body.dark-mode .logo-mono {
   color: #FFFFFF;
   padding: 20px;
 }
-
+ 
 .footer-inner {
   max-width: 1280px;
   margin: 0 auto;
@@ -757,15 +772,15 @@ body.dark-mode .logo-mono {
   justify-content: space-between;
   position: relative;
 }
-
+ 
 .footer-logo img {
   width: auto;
   height: 62px;         
   object-fit: contain;
   margin-left: 0;       
 }
-
-
+ 
+ 
 .footer-copy {
   font-size: 15px;
   text-align: center;
@@ -776,7 +791,7 @@ body.dark-mode .logo-mono {
   top: 50%;
   transform: translateY(-50%);
 }
-
+ 
 /* ---------------------------------------------------------
    11. BOTÃO VOLTAR AO TOPO
    --------------------------------------------------------- */
@@ -796,7 +811,7 @@ body.dark-mode .logo-mono {
 }
 .back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top:hover { background: var(--verde); color: var(--branco); }
-
+ 
 /* ---------------------------------------------------------
    12. MODO ESCURO (via toggle de acessibilidade)
    --------------------------------------------------------- */
@@ -811,11 +826,11 @@ body.dark-mode .doacoes-list li,
 body.dark-mode .beneficio-card,
 body.dark-mode .back-to-top,
 body.dark-mode .main-nav { background: #1b1b1b; color: #ECECEC; } 
-
+ 
 body.dark-mode .sobre,
 body.dark-mode .doacoes,
 body.dark-mode .depoimentos { background: #181818; } 
-
+ 
 body.dark-mode .nav-links a,
 body.dark-mode .card.testimonial h3,
 body.dark-mode .sobre-text h3,
@@ -828,23 +843,93 @@ body.dark-mode .beneficio-card p,
 body.dark-mode .contato-info p { color: #b7b7b7; }
 body.dark-mode .a11y-label { color: #b7b7b7; }
 body.dark-mode .header-top { border-bottom-color: #2a2a2a; }
-
-
+ 
+/* ---- Ajustes pontuais do modo monocromático (preto e branco) ----
+   Título (pill) de Depoimentos / Sobre Nós / Dias de Doações,
+   estrelas dos depoimentos, cards de Batata/Alface/Cenoura/Tomate
+   e os dias da semana. Nos elementos que já tinham borda no modo
+   normal (cards e botões), só trocamos a cor da borda. No pill e
+   nos dias, que não tinham borda, usamos box-shadow inset para
+   simular o contorno branco sem alterar tamanho/espaçamento. */
+ 
+body.dark-mode .pill {
+  background: #000000;
+  color: #FFFFFF;
+  box-shadow: inset 0 0 0 2px #FFFFFF;
+}
+ 
+body.dark-mode .stars {
+  color: #FFFFFF;
+}
+ 
+body.dark-mode .beneficio-card.yellow,
+body.dark-mode .beneficio-card.green,
+body.dark-mode .beneficio-card.orange,
+body.dark-mode .beneficio-card.red {
+  background: #000000;
+  border-color: #FFFFFF;
+}
+body.dark-mode .beneficio-card.yellow h4,
+body.dark-mode .beneficio-card.green h4,
+body.dark-mode .beneficio-card.orange h4,
+body.dark-mode .beneficio-card.red h4 {
+  color: #FFFFFF;
+}
+body.dark-mode .beneficio-card.yellow p,
+body.dark-mode .beneficio-card.green p,
+body.dark-mode .beneficio-card.orange p,
+body.dark-mode .beneficio-card.red p {
+  color: #FFFFFF;
+}
+ 
+body.dark-mode .dia-btn {
+  background: #000000;
+  color: #FFFFFF;
+  box-shadow: inset 0 0 0 2px #FFFFFF;
+}
+ 
+ 
 body.dark-mode .font-btn {
   background: #1b1b1b;
   color: #ECECEC;
   border-color: #2a2a2a;
 }
+/* ALTERADO: A+ / A- sem nenhum efeito no hover do modo monocromático —
+   mantêm exatamente as mesmas cores que já têm antes de passar o mouse. */
 body.dark-mode .font-btn:hover {
-  background: var(--verde);
-  color: var(--branco);
+  background: #1b1b1b;
+  color: #ECECEC;
+  border-color: #2a2a2a;
 }
-
-
+ 
+/* Ícones da seção de Contato: brancos no modo monocromático */
+body.dark-mode .contato-info svg {
+  color: #FFFFFF;
+}
+ 
+/* Footer em cinza escuro (não preto) no modo monocromático */
+body.dark-mode .site-footer {
+  background: #3F3F3F;
+}
+ 
+ 
 body.dark-mode .auth-field input::placeholder {
   color: #8a8a8a;
 }
-
+ 
+/* ALTERADO: linha do hover dos links do menu (Início, Sobre, Benefícios,
+   Doações, Contato) em branco no modo monocromático. Mesma animação,
+   mesma espessura, mesma posição — só a cor muda. */
+body.dark-mode .nav-links a::after {
+  background: #FFFFFF;
+}
+ 
+/* ALTERADO: ícone de perfil sem nenhum efeito no hover do modo
+   monocromático — mantém exatamente o fundo que já tem antes do hover. */
+body.dark-mode .user-icon:hover {
+  background: var(--texto);
+}
+ 
 /* ---------------------------------------------------------
    13. RESPONSIVIDADE
    --------------------------------------------------------- */
@@ -856,10 +941,10 @@ body.dark-mode .auth-field input::placeholder {
   .sobre-row.reverse .sobre-image { order: initial; }
   .doacoes-image img { aspect-ratio: 16/9; }
 }
-
+ 
 @media (max-width: 860px) {
   :root { --header-h: 104px; }
-
+ 
   .menu-toggle { display: flex; }
   .main-nav {
     position: fixed;
@@ -878,17 +963,17 @@ body.dark-mode .auth-field input::placeholder {
   .main-nav.open { transform: translateX(0); }
   .nav-links { flex-direction: column; gap: 20px; }
   .header-actions { flex-direction: column; align-items: flex-start; gap: 14px; }
-
+ 
   .menu-toggle.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
   .menu-toggle.open span:nth-child(2) { opacity: 0; }
   .menu-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
-
+ 
   .header-top-inner { justify-content: center; }
   .hero { height: 70vh; }
   .hero-content { padding: 0 30px; }
   .section { padding: 64px 22px; }
 }
-
+ 
 @media (max-width: 640px) {
   .cards-row { grid-template-columns: 1fr; }
   .beneficios-grid { grid-template-columns: 1fr; }
@@ -897,11 +982,11 @@ body.dark-mode .auth-field input::placeholder {
   .footer-links { justify-content: center; }
   .doacoes-list li { flex-wrap: wrap; }
 }
-
+ 
  /* ---------------------------------------------------------
    14. AUTENTICAÇÃO (cadastro, login, perfil)
    --------------------------------------------------------- */
-
+ 
 /* Tela de bloqueio exibida antes do login/cadastro */
 .auth-gate {
   position: fixed;
@@ -920,7 +1005,7 @@ body.dark-mode .auth-field input::placeholder {
 .auth-gate-logo { width: 150px; height: 68px; justify-content: center; margin: 0 auto; }
 .auth-gate-logo .logo-img { max-width: 150px; max-height: 68px; }
 .auth-gate-text { color: var(--branco); font-family: var(--fonte-corpo); font-size: 1rem; opacity: .9; }
-
+ 
 /* Overlay dos modais */
 .auth-modal-overlay {
   position: fixed;
@@ -933,7 +1018,7 @@ body.dark-mode .auth-field input::placeholder {
   padding: 20px;
 }
 .auth-modal-overlay.visible { display: flex; }
-
+ 
 .auth-modal {
   position: relative;
   width: 100%;
@@ -946,7 +1031,7 @@ body.dark-mode .auth-field input::placeholder {
   padding: 36px 32px;
 }
 body.dark-mode .auth-modal { background: #1b1b1b; }
-
+ 
 .auth-modal-title {
   font-size: 1.5rem;
   color: var(--verde-escuro);
@@ -954,7 +1039,7 @@ body.dark-mode .auth-modal { background: #1b1b1b; }
   text-align: center;
 }
 body.dark-mode .auth-modal-title { color: #ECECEC; }
-
+ 
 .auth-close {
   position: absolute;
   top: 16px; right: 18px;
@@ -964,7 +1049,7 @@ body.dark-mode .auth-modal-title { color: #ECECEC; }
   cursor: pointer;
 }
 .auth-close:hover { color: var(--laranja); }
-
+ 
 .auth-field { margin-bottom: 16px; }
 .auth-field label {
   display: block;
@@ -974,7 +1059,7 @@ body.dark-mode .auth-modal-title { color: #ECECEC; }
   margin-bottom: 6px;
 }
 body.dark-mode .auth-field label { color: #ECECEC; }
-
+ 
 .auth-field input {
   width: 100%;
   padding: 11px 14px;
@@ -988,7 +1073,7 @@ body.dark-mode .auth-field label { color: #ECECEC; }
 }
 .auth-field input:focus { outline: none; border-color: var(--verde); }
 body.dark-mode .auth-field input { background: #121212; color: #ECECEC; border-color: #2a2a2a; }
-
+ 
 .auth-error {
   color: #c0392b;
   font-size: .85rem;
@@ -997,9 +1082,9 @@ body.dark-mode .auth-field input { background: #121212; color: #ECECEC; border-c
   min-height: 1em;
 }
 .auth-error:empty { display: none; }
-
+ 
 .auth-submit { width: 100%; text-align: center; padding: 12px 26px; margin-top: 4px; }
-
+ 
 .auth-switch {
   text-align: center;
   font-size: .88rem;
@@ -1012,9 +1097,10 @@ body.dark-mode .auth-field input { background: #121212; color: #ECECEC; border-c
   cursor: pointer;
   text-decoration: underline;
 }
-
+ 
 .perfil-linha { font-size: .95rem; margin-bottom: 12px; color: var(--texto); }
 body.dark-mode .perfil-linha { color: #ECECEC; }
 .perfil-acoes { display: flex; gap: 12px; margin-top: 20px; }
 .perfil-acoes .btn { flex: 1; text-align: center; }
 .perfil-edit.hidden, [hidden] { display: none !important; }
+ 
